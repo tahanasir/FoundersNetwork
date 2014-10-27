@@ -28,6 +28,14 @@
         ///////     they will do the getting of the
         ///////     variable and the if else
         ////////////////////////////////////////////
+        
+        NSString *userAnswer=_answerTextField.text;
+        if([userAnswer isEqualToString:@"yes"]){
+            _feedbackTextField.text=@"Alright, lets go!";
+        }
+        else if ([userAnswer isEqualToString:@"no"]){
+            _feedbackTextField.text=@"Fine then, bye";
+        }
     }
     else if (counter==1){
         int userAge=[_answerTextField.text integerValue];
@@ -35,6 +43,13 @@
         ////////////////////////////////////////////
         ///////     they will do the if else here
         ////////////////////////////////////////////
+        
+        if(userAge>18){
+            _feedbackTextField.text=@"Go ahead and play!";
+        }
+        else{
+            _feedbackTextField.text=@"You can play, but I take no responsibility.";
+        }
     }
     else if (counter==2){
         
@@ -42,6 +57,14 @@
         ///////     they will do the getting of the
         ///////     variable and the if else
         ////////////////////////////////////////////
+        
+        NSString *feelingLucky=_answerTextField.text;
+        if([feelingLucky isEqualToString:@"yes"]){
+            _feedbackTextField.text=@"Batman hits you very hard. It's Batman and you're you! Of course Batman wins!";
+        }
+        else{
+            _feedbackTextField.text=@"You did not say yes to feeling lucky. Good choice! You are a winner in the game of not getting beaten up by Batman.";
+        }
     }
     else if(counter==3){
         int userRating=[_answerTextField.text integerValue];
@@ -49,6 +72,12 @@
         ////////////////////////////////////////////
         ///////  they will do the if else here
         ////////////////////////////////////////////
+        if(userRating>8){
+            _feedbackTextField.text=@"This is just the beginning of my game empire. Stay tuned for more!";
+        }
+        else{
+            _feedbackTextField.text=@"I slaved away at this game and you gave me that score?! The nerve! Just you wait!";
+        }
     }
     [_answerTextField resignFirstResponder];
     _nextbutton.enabled=YES;
